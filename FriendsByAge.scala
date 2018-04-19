@@ -15,7 +15,8 @@ object FriendsByAge {
       val age = fields(2).toInt
       val numFriends = fields(3).toInt
       // Create a tuple that is our result.
-      (age, numFriends)
+      // This is a useful way of returning tuples from a method in Scala.
+      (age, numFriends) 
   }
   
   /** Our main function where the action happens */
