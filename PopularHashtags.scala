@@ -62,6 +62,7 @@ object PopularHashtags {
     val hashtagCounts = hashtagKeyValues.reduceByKeyAndWindow( (x,y) => x + y, (x,y) => x - y, Seconds(300), Seconds(1))
     //  You will often see this written in the following shorthand:
     //val hashtagCounts = hashtagKeyValues.reduceByKeyAndWindow( _ + _, _ -_, Seconds(300), Seconds(1))
+    // (x,y) => x - y is an optional parameter used mainly to optimize the sliding window operation.
     
     // Sort the results by the count values
     val sortedResults = hashtagCounts.transform(rdd => rdd.sortBy(x => x._2, false))
