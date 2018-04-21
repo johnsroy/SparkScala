@@ -4,3 +4,4 @@
 #### Sharing some very useful code snippets to deal with real world problems. ####
 #### Illustrates how to build applications, machine learning algorthims, graph relations, running queries on Big Data in Spark using Scala ####
 ##### ml-100k is the massive IMDB dataset used for building these apps #####
+##### The popularHashTags.scala file requires you to create a Twitter account and get all the access tokens and other Twitter APIs in place to actually run the application.
